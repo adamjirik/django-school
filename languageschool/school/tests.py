@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 import datetime
 
 # Create your tests here.
+
 class ModelTest(TestCase):
 
     def test_can_make_a_group_with_teacher_student_classroom(self):
