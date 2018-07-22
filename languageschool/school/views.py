@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
-from django.contrib.auth.forms import UserCreationForm
 from .forms import NewUserRegistration
-from .models import Student, Teacher
+from .models import Student, Teacher, Classroom
+from django.views.generic import ListView
 
 # Create your views here.
 def index(request):
@@ -31,3 +31,11 @@ def register(request):
     else:
         form = NewUserRegistration()
     return render(request, 'register.html', {'form': form})
+
+class ClassroomListView(ListView):
+    model = Classroom
+    context_object_name = 'classroom_list'
+
+class TeacherListView(ListView):
+    model = Teacher
+    context_object_name = 'teacher_list'

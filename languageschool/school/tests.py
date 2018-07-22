@@ -63,4 +63,6 @@ class AssignmentTest(TestCase):
             st_grades.append(assignment.grade)
         self.assertIn(80.0, st_grades)
 
-
+class NewUserTest(TestCase):
+    def test_user_has_full_info_and_is_related_to_student_or_teacher(self):
+        pass
