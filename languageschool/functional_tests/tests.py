@@ -12,4 +12,8 @@ class NewUserTest(StaticLiveServerTestCase):
             self.live_server_url = 'http://' + staging_server
 
     def tearDown(self):
-        pass
+        self.browser.quit()
+
+    def test_user_has_full_info_and_is_related_to_student_or_teacher(self):
+        self.browser.get(self.live_server_url + '/register')
+        #TO-DO

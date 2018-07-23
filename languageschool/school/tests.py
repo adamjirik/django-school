@@ -1,4 +1,4 @@
-from django.contrib.staticfiles.testing import StaticLiveServerTestCase
+from .forms import NewUserRegistration
 from django.test import TestCase
 from .models import Student, Group, Classroom, Teacher, Assignment, StudentAssignment
 from django.contrib.auth.models import User
@@ -64,5 +64,18 @@ class AssignmentTest(TestCase):
         self.assertIn(80.0, st_grades)
 
 class NewUserTest(TestCase):
-    def test_user_has_full_info_and_is_related_to_student_or_teacher(self):
-        pass
+    def test_new_user_registration_form(self):
+        form = NewUserRegistration({
+            'username': 'mrtest',
+            'email' : "test@test.com",
+            'first_name': 'john',
+            'last_name': 'doe',
+            'student_or_teacher': 's',
+            'password1': 't3stT3ST',
+            'password2': 't3stT3ST',
+        })
+        new_user = form.save()
+        self.assertEqual(new_user.first_name, 'john')
+        self.assertEqual(new_user.last_name, 'doe')
+        self.assertEqual(new_user.email, 'test@test.com')
+        self.assertEqual(new_user.username, 'mrtest')
