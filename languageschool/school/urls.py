@@ -1,10 +1,13 @@
 from django.urls import path
-
-from .views import index, register, ClassroomListView, TeacherListView
+from . import views
 
 urlpatterns = [
-	path('', index, name='index'),
-	path('register/', register, name='register'),
-	path('classrooms/', ClassroomListView.as_view()),
-	path('teachers/', TeacherListView.as_view())
+	path('', views.index, name='index'),
+	path('register/', views.register, name='register'),
+	path('classrooms/', views.ClassroomListView.as_view(), name='classroom-list'),
+	path('teachers/', views.TeacherListView.as_view(), name='teacher-list'),
+	path('groups/', views.GroupListView.as_view(), name='group-list'),
+	path('groups/<int:pk>/', views.GroupDetailView.as_view(), name='group-detail'),
+	path('groups/add/', views.GroupCreateView.as_view(), name='group-add'),
+	path('logout/', views.logout, {'next_page': ''}, name='logout'),
 ]

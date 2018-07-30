@@ -1,25 +1,37 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 # Create your models here.
 
 class Student(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return "%s %s" % (self.user.first_name, self.user.last_name)
+
 class Teacher(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return "%s %s" % (self.user.first_name, self.user.last_name)
+
 class Classroom(models.Model):
-    room_name = models.TextField(max_length=15)
+    room_name = models.CharField(max_length=15)
     seats = models.IntegerField()
 
+    def __str__(self):
+        return "%s" % (self.room_name)
+
 class Group(models.Model):
-    group_name = models.TextField(max_length=10)
+    group_name = models.CharField(max_length=10)
     students = models.ManyToManyField(Student)
-    language = models.TextField()
+    language = models.CharField(max_length=25)
     teacher = models.OneToOneField(Teacher, on_delete=models.CASCADE)
     classroom = models.ForeignKey(Classroom, on_delete=models.CASCADE)
 
+    def get_absolute_url(self):
+        return reverse('group-detail', kwargs={'pk': self.pk})
 
 class Assignment(models.Model):
     description = models.TextField(max_length=80)

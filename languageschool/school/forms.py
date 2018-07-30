@@ -1,5 +1,8 @@
 from django import forms
 from django.contrib.auth.models import User
+from django.forms import widgets
+
+from .models import Group, Student, Teacher, Classroom
 
 from django.contrib.auth.forms import UserCreationForm
 
@@ -21,3 +24,13 @@ class NewUserRegistration(UserCreationForm):
             user.save()
         return user
 
+class NewGroup(forms.ModelForm):
+    group_name = forms.CharField()
+    students = forms.ModelMultipleChoiceField(queryset=Student.objects.all(), widget=widgets.CheckboxSelectMultiple)
+    language = forms.CharField()
+    teacher = forms.ModelChoiceField(queryset=Teacher.objects.all())
+    classroom = forms.ModelChoiceField(queryset=Classroom.objects.all())
+
+    class Meta:
+        model = Group
+        fields = ['group_name', 'students', 'language', 'teacher', 'classroom']

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block header %}Create a new group{% endblock %}
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Create group</button>
+  </form>
+
+{% endblock %}

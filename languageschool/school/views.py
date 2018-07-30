@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import login, authenticate
-from .forms import NewUserRegistration
-from .models import Student, Teacher, Classroom
-from django.views.generic import ListView
+from django.contrib.auth import login, authenticate, logout
+from .forms import NewUserRegistration, NewGroup
+from .models import Student, Teacher, Classroom, Group
+from django.views.generic import ListView, DetailView, CreateView
 
 # Create your views here.
 def index(request):
@@ -31,6 +31,10 @@ def register(request):
         form = NewUserRegistration()
     return render(request, 'register.html', {'form': form})
 
+def logoout_view(request):
+    logout(request)
+
+
 class ClassroomListView(ListView):
     model = Classroom
     context_object_name = 'classroom_list'
@@ -38,3 +42,19 @@ class ClassroomListView(ListView):
 class TeacherListView(ListView):
     model = Teacher
     context_object_name = 'teacher_list'
+
+class GroupListView(ListView):
+    model = Group
+    context_object_name = 'group_list'
+
+class GroupDetailView(DetailView):
+    model = Group
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['student_list'] = Student.objects.all()
+        return context
+
+class GroupCreateView(CreateView):
+    model = Group
+    form_class = NewGroup

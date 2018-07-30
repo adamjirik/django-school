@@ -45,6 +45,7 @@ class AssignmentTest(TestCase):
         group = Group.objects.create(language='spanish', group_name='group test', classroom=classroom, teacher=te)
         group.save()
         group.students.set([st, st2])
+        self.assertEqual(group.students.count(), 2)
 
         assign = Assignment.objects.create(description='test',due_date=datetime.datetime.now(), group=group)
         assign2 = Assignment.objects.create(description='test2',due_date=datetime.datetime.now(), group=group)
@@ -62,6 +63,7 @@ class AssignmentTest(TestCase):
         for assignment in st_assignments:
             st_grades.append(assignment.grade)
         self.assertIn(80.0, st_grades)
+
 
 class NewUserTest(TestCase):
     def test_new_user_registration_form(self):
