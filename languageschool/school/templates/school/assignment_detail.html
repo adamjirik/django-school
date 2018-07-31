@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block header %}Group: {{ group.group_name}}{% endblock %}
+{% block content %}
+
+<ul>
+<li><b>Description: </b>{{ assignment.description }}</li>
+<li><b>Group Name: </b>{{ assignment.group }}</li>
+<li><b>Due Date: </b>{{ assignment.due_date }}</li>
+<li><b>Students: </b>
+        <ul>
+        {% for assignment in student_assignments %}
+            <li>{{ assignment.student }} - Grade: {{ assignment.grade }}</li>
+        {% endfor %}</ul></li>
+</ul>
+
+{% endblock %}

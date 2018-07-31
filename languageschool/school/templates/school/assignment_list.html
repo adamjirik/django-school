@@ -1,10 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+{% block header %}Assignments{% endblock %}
+{% block content %}
+
+        {% for assignment in assignment_list %}
+
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <div class="card-body">
+                    <ul>
+                        <li><b>Description: </b>{{ assignment.description }}</li>
+                        <li><b>Group Name: </b>{{ assignment.group }}</li>
+                        <li><b>Due Date: </b>{{ assignment.due_date }}</li>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='/assignments/{{ assignment.id }}'">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+{% endfor %}
+
+{% endblock %}

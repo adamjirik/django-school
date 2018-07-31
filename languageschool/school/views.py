@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from .forms import NewUserRegistration, NewGroupForm, NewAssignmentForm
-from .models import Student, Teacher, Classroom, Group, Assignment
+from .models import Student, Teacher, Classroom, Group, Assignment, StudentAssignment
 from django.views.generic import ListView, DetailView, CreateView, FormView
 
 # Create your views here.
@@ -52,14 +52,25 @@ class GroupDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['student_list'] = Student.objects.all()
+        context['student_list'] = self.get_object().students.all()
         return context
 
 class GroupCreateView(CreateView):
     model = Group
     form_class = NewGroupForm
 
+class AssignmentListView(ListView):
+    model = Assignment
+    context_object_name = 'assignment_list'
+
+class AssignmentDetailView(DetailView):
+    model = Assignment
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['student_assignments'] = StudentAssignment.objects.filter(assignment=self.get_object())
+        return context
+
 class AssignmentCreateView(CreateView):
     model = Assignment
     form_class = NewAssignmentForm
-
