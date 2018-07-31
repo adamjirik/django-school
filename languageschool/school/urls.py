@@ -10,4 +10,5 @@ urlpatterns = [
 	path('groups/<int:pk>/', views.GroupDetailView.as_view(), name='group-detail'),
 	path('groups/add/', views.GroupCreateView.as_view(), name='group-add'),
 	path('logout/', views.logout, {'next_page': ''}, name='logout'),
+	path('assignments/add/', views.AssignmentCreateView.as_view(), name='assignment-add')
 ]

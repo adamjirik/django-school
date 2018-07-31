@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
-from .forms import NewUserRegistration, NewGroup
-from .models import Student, Teacher, Classroom, Group
-from django.views.generic import ListView, DetailView, CreateView
+from .forms import NewUserRegistration, NewGroupForm, NewAssignmentForm
+from .models import Student, Teacher, Classroom, Group, Assignment
+from django.views.generic import ListView, DetailView, CreateView, FormView
 
 # Create your views here.
 def index(request):
@@ -57,4 +57,9 @@ class GroupDetailView(DetailView):
 
 class GroupCreateView(CreateView):
     model = Group
-    form_class = NewGroup
+    form_class = NewGroupForm
+
+class AssignmentCreateView(CreateView):
+    model = Assignment
+    form_class = NewAssignmentForm
+

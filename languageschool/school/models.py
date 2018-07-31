@@ -6,12 +6,14 @@ from django.urls import reverse
 
 class Student(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    assignments = models.ManyToManyField('Assignment', through='StudentAssignment')
 
     def __str__(self):
         return "%s %s" % (self.user.first_name, self.user.last_name)
 
 class Teacher(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+
 
     def __str__(self):
         return "%s %s" % (self.user.first_name, self.user.last_name)
@@ -33,6 +35,9 @@ class Group(models.Model):
     def get_absolute_url(self):
         return reverse('group-detail', kwargs={'pk': self.pk})
 
+    def __str__(self):
+        return "%s" % (self.group_name)
+
 class Assignment(models.Model):
     description = models.TextField(max_length=80)
     due_date = models.DateField()
@@ -41,6 +46,8 @@ class Assignment(models.Model):
 
 
 class StudentAssignment(models.Model):
-    student = models.ForeignKey(Student, on_delete=models.CASCADE)
-    assignment = models.ForeignKey(Assignment, on_delete=models.CASCADE)
-    grade = models.FloatField()
+    student = models.ForeignKey(Student, related_name='students', db_column='student_id', on_delete=models.CASCADE)
+    assignment = models.ForeignKey(Assignment, db_column='assignment_id', on_delete=models.CASCADE)
+    grade = models.FloatField(default=0.01)
+
+
