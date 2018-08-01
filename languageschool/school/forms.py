@@ -26,6 +26,7 @@ class NewUserRegistration(UserCreationForm):
 
 class NewGroupForm(forms.ModelForm):
     group_name = forms.CharField()
+    slug = forms.SlugField()
     students = forms.ModelMultipleChoiceField(queryset=Student.objects.all(), widget=widgets.CheckboxSelectMultiple)
     language = forms.CharField()
     teacher = forms.ModelChoiceField(queryset=Teacher.objects.all())
@@ -33,25 +34,25 @@ class NewGroupForm(forms.ModelForm):
 
     class Meta:
         model = Group
-        fields = ['group_name', 'students', 'language', 'teacher', 'classroom']
+        fields = ['group_name', 'slug', 'students', 'language', 'teacher', 'classroom']
 
 
 class NewAssignmentForm(forms.ModelForm):
-
+    group_slug = forms.CharField(widget=widgets.HiddenInput())
     description = forms.CharField(widget=widgets.Textarea)
-    group = forms.ModelChoiceField(queryset=Group.objects.all())
     due_date = forms.DateField(widget=widgets.SelectDateWidget)
 
     class Meta:
         model = Assignment
 
-        fields = ['description', 'group', 'due_date']
+        fields = ['description', 'due_date']
 
 
     def save(self, commit=True):
         assignment = super().save(commit=False)
         assignment.description = self.cleaned_data['description']
-        assignment.group = self.cleaned_data['group']
+        group_slug = self.cleaned_data.get('group_slug')
+        assignment.group = Group.objects.get(slug=group_slug)
         assignment.due_date = self.cleaned_data['due_date']
         if commit:
             assignment.save()

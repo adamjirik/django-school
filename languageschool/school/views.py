@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.views import logout
 from .forms import NewUserRegistration, NewGroupForm, NewAssignmentForm
@@ -73,9 +73,15 @@ class GroupCreateView(CreateView):
     model = Group
     form_class = NewGroupForm
 
+
 class AssignmentListView(ListView):
     model = Assignment
-    context_object_name = 'assignment_list'
+
+    def get_queryset(self):
+        slug = self.kwargs.get('slug', self.request.GET.get('slug'))
+        queryset = Assignment.objects.filter(group=Group.objects.get(slug=slug))
+        return queryset
+
 
 class AssignmentDetailView(DetailView):
     model = Assignment
@@ -84,8 +90,14 @@ class AssignmentDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         context['student_assignments'] = StudentAssignment.objects.filter(assignment=self.get_object())
         return context
+    #
 
 class AssignmentCreateView(CreateView):
     model = Assignment
     form_class = NewAssignmentForm
 
+    def get_initial(self):
+        group_slug = self.kwargs.get('slug', self.request.POST.get('slug'))
+        group = get_object_or_404(Group, slug=group_slug)
+
+        return {'group_slug': group_slug}
