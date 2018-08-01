@@ -19,5 +19,6 @@ from school import urls as school_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(school_urls))
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('', include(school_urls)),
 ]

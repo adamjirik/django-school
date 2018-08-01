@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth import login, authenticate
+from django.contrib.auth.views import logout
 from .forms import NewUserRegistration, NewGroupForm, NewAssignmentForm
 from .models import Student, Teacher, Classroom, Group, Assignment, StudentAssignment
 from django.views.generic import ListView, DetailView, CreateView, FormView
@@ -39,6 +40,19 @@ class ClassroomListView(ListView):
     model = Classroom
     context_object_name = 'classroom_list'
 
+
+
+
+class ClassroomDetailView(DetailView):
+    model = Classroom
+    context_object_name = 'classroom'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['lessons'] = self.get_object().schoollesson_set.all()
+        return context
+
+
 class TeacherListView(ListView):
     model = Teacher
     context_object_name = 'teacher_list'
@@ -74,3 +88,4 @@ class AssignmentDetailView(DetailView):
 class AssignmentCreateView(CreateView):
     model = Assignment
     form_class = NewAssignmentForm
+

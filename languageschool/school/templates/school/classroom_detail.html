@@ -1,19 +1,25 @@
 {% extends 'base.html' %}
-{% block header %}Classrooms{% endblock %}
+{% block header %}Classroom: {{ classroom }}{% endblock %}
 {% block content %}
-
-        {% for classroom in classroom_list %}
+<div class="container">
+<ul>
+    <li><b>Seats: </b>{{ classroom.seats }}</li>
+</ul>
+</div>
+        {% for lesson in lessons %}
 
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
                 <div class="card-body">
                     <ul>
-                            <li><b>Room Name: </b>{{ classroom.room_name }}</li>
-                            <li><b>Seats: </b>{{ classroom.seats }}</li>
+                            <li><b>Group: </b>{{ lesson.group }}</li>
+                            <li><b>Day: </b>{{ lesson.days_of_week }}</li>
+                            <li><b>Start: </b>{{ lesson.start_time }}</li>
+                            <li><b>End: </b>{{ lesson.end_time }}</li>
                     </ul>
                     <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='/classrooms/{{ classroom.id }}'">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                       <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                     </div>
                     <small class="text-muted">9 mins</small>
@@ -22,5 +28,6 @@
               </div>
             </div>
         {% endfor %}
+
 
 {% endblock %}
