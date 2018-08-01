@@ -14,7 +14,8 @@
     {% endfor %}</ul></li>
 </ul>
 <div class="container">
-    <a href="#">Add assignment</a>
+    <div class="btn-group">
+        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='/groups/{{ group.slug }}/assignments'">View Assignments</button>
+    </div>
 </div>
-
 {% endblock %}

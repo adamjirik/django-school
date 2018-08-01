@@ -82,6 +82,11 @@ class AssignmentListView(ListView):
         queryset = Assignment.objects.filter(group=Group.objects.get(slug=slug))
         return queryset
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['group_slug'] = self.kwargs.get('slug', self.request.GET.get('slug'))
+        return context
+
 
 class AssignmentDetailView(DetailView):
     model = Assignment
