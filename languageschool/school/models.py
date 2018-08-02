@@ -15,7 +15,6 @@ class Student(models.Model):
 class Teacher(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
-
     def __str__(self):
         return "%s %s" % (self.user.first_name, self.user.last_name)
 
@@ -31,7 +30,7 @@ class Group(models.Model):
     slug = models.SlugField()
     students = models.ManyToManyField(Student)
     language = models.CharField(max_length=25)
-    teacher = models.OneToOneField(Teacher, on_delete=models.CASCADE)
+    teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE)
     classroom = models.ForeignKey(Classroom, on_delete=models.CASCADE)
 
     def get_absolute_url(self):
@@ -50,6 +49,9 @@ class Assignment(models.Model):
     due_date = models.DateField()
     group = models.ForeignKey(Group, on_delete=models.CASCADE)
     students = models.ManyToManyField(Student, through='StudentAssignment')
+
+    def get_absolute_url(self):
+        return reverse('group-detail', kwargs={'slug': self.group.slug})
 
 
 class StudentAssignment(models.Model):

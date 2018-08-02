@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.views import logout
+from django.contrib.auth.mixins import PermissionRequiredMixin
+
 from .forms import NewUserRegistration, NewGroupForm, NewAssignmentForm
 from .models import Student, Teacher, Classroom, Group, Assignment, StudentAssignment
 from django.views.generic import ListView, DetailView, CreateView, FormView
@@ -72,7 +74,6 @@ class GroupDetailView(DetailView):
 class GroupCreateView(CreateView):
     model = Group
     form_class = NewGroupForm
-
 
 class AssignmentListView(ListView):
     model = Assignment

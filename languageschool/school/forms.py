@@ -26,7 +26,6 @@ class NewUserRegistration(UserCreationForm):
 
 class NewGroupForm(forms.ModelForm):
     group_name = forms.CharField()
-    slug = forms.SlugField()
     students = forms.ModelMultipleChoiceField(queryset=Student.objects.all(), widget=widgets.CheckboxSelectMultiple)
     language = forms.CharField()
     teacher = forms.ModelChoiceField(queryset=Teacher.objects.all())
@@ -34,7 +33,8 @@ class NewGroupForm(forms.ModelForm):
 
     class Meta:
         model = Group
-        fields = ['group_name', 'slug', 'students', 'language', 'teacher', 'classroom']
+        fields = ['group_name', 'students', 'language', 'teacher', 'classroom']
+
 
 
 class NewAssignmentForm(forms.ModelForm):
