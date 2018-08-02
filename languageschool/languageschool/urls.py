@@ -16,9 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from school import urls as school_urls
+from school.views import RegisterView, StudentRegisterView, TeacherRegisterView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/register', RegisterView.as_view(), name='register'),
+    path('accounts/register/student', StudentRegisterView.as_view(), name='student-register'),
+    path('accounts/register/teacher', TeacherRegisterView.as_view(), name='teacher-register'),
     path('', include(school_urls)),
 ]

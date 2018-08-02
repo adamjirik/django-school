@@ -1,27 +1,53 @@
 from django import forms
-from django.contrib.auth.models import User
-from django.forms import widgets, inlineformset_factory
+from django.forms import widgets
+from django.db import transaction
 
-from .models import Group, Student, Teacher, Classroom, Assignment, StudentAssignment
+from .models import Group, Student, Teacher, Classroom, Assignment, StudentAssignment, User
 
 from django.contrib.auth.forms import UserCreationForm
 
-class NewUserRegistration(UserCreationForm):
-    CHOICES = (('s', 'Student'), ('t', 'Teacher'))
-    email = forms.EmailField()
-    first_name = forms.CharField()
-    last_name = forms.CharField()
-    student_or_teacher = forms.ChoiceField(widget=forms.RadioSelect, choices=CHOICES)
+# class NewUserRegistration(UserCreationForm):
+#     CHOICES = (('s', 'Student'), ('t', 'Teacher'))
+#     email = forms.EmailField()
+#     first_name = forms.CharField()
+#     last_name = forms.CharField()
+#     student_or_teacher = forms.ChoiceField(widget=forms.RadioSelect, choices=CHOICES)
+#
+#
+#     def save(self, commit=True):
+#         user = super().save(commit=False)
+#         user.first_name = self.cleaned_data["first_name"]
+#         user.last_name = self.cleaned_data["last_name"]
+#         user.email = self.cleaned_data["email"]
+#         user.set_password(self.cleaned_data["password1"])
+#         if commit:
+#             user.save()
+#         return user
 
+class StudentRegisterForm(UserCreationForm):
 
-    def save(self, commit=True):
+    class Meta(UserCreationForm.Meta):
+        model = User
+
+    @transaction.atomic()
+    def save(self):
         user = super().save(commit=False)
-        user.first_name = self.cleaned_data["first_name"]
-        user.last_name = self.cleaned_data["last_name"]
-        user.email = self.cleaned_data["email"]
-        user.set_password(self.cleaned_data["password1"])
-        if commit:
-            user.save()
+        user.is_student = True
+        user.save()
+        student = Student.objects.create(user=user)
+        return user
+
+class TeacherRegisterForm(UserCreationForm):
+
+    class Meta(UserCreationForm.Meta):
+        model = User
+
+    @transaction.atomic()
+    def save(self):
+        user = super().save(commit=False)
+        user.is_teacher = True
+        user.save()
+        teacher = Teacher.objects.create(user=user)
         return user
 
 class NewGroupForm(forms.ModelForm):
