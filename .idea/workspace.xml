@@ -6,8 +6,6 @@
       <change beforePath="$PROJECT_DIR$/languageschool/school/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/languageschool/school/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languageschool/school/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/languageschool/school/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languageschool/school/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/languageschool/school/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languageschool/school/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/languageschool/school/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languageschool/school/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/languageschool/school/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,28 +27,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="31" />
-          <entry key="py" value="33" />
+          <entry key="html" value="38" />
+          <entry key="py" value="44" />
           <entry key="yml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="31" />
-          <entry key="Python" value="33" />
+          <entry key="HTML" value="38" />
+          <entry key="Python" value="44" />
           <entry key="YAML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="1954" />
-          <entry key="py" value="9282" />
+          <entry key="html" value="2108" />
+          <entry key="py" value="10683" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1954" />
-          <entry key="Python" value="9282" />
+          <entry key="HTML" value="2108" />
+          <entry key="Python" value="10683" />
         </counts>
       </usages-collector>
     </session>
@@ -58,72 +56,47 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/languageschool/school/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+                <marker date="1533212884428" expanded="true" signature="961:1302" ph="..." />
+                <marker date="1533212884428" expanded="true" signature="961:1687" ph="..." />
+                <marker date="1533212884428" expanded="true" signature="2170:2171" ph="..." />
+                <marker date="1533212884428" expanded="true" signature="2214:2215" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/languageschool/school/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-411">
-              <caret line="61" column="38" lean-forward="true" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="38" />
+            <state relative-caret-position="327">
+              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
-                <marker date="1533208292906" expanded="true" signature="380:495" ph="..." />
+                <marker date="1533217495733" expanded="true" signature="323:431" ph="..." />
+                <marker date="1533217495733" expanded="true" signature="693:699" ph="..." />
+                <marker date="1533217495733" expanded="true" signature="1588:1739" ph="..." />
+                <marker date="1533217495733" expanded="true" signature="1853:1991" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/languageschool/school/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="101" selection-start-line="101" selection-end-line="101" />
-              <folding>
-                <element signature="e#0#64#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/languageschool/school/migrations/0003_auto_20180801_1316.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/languageschool/school/migrations/0004_auto_20180801_1930.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/languageschool/school/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+            <state relative-caret-position="285">
+              <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
-                <marker date="1533150940731" expanded="true" signature="121:122" ph="..." />
-                <marker date="1533150940731" expanded="true" signature="164:421" ph="..." />
-                <marker date="1533150940731" expanded="true" signature="288:421" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/languageschool/school/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="59" column="55" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-                <marker date="1533130364434" expanded="true" signature="1395:1396" ph="..." />
-                <marker date="1533130364434" expanded="true" signature="1439:1440" ph="..." />
+                <marker date="1533216470857" expanded="true" signature="186:187" ph="..." />
+                <marker date="1533216470857" expanded="true" signature="229:486" ph="..." />
+                <marker date="1533216470857" expanded="true" signature="353:486" ph="..." />
               </folding>
             </state>
           </provider>
@@ -145,6 +118,8 @@
       <find>table</find>
       <find>NewGroup</find>
       <find>reverse</find>
+      <find>Permi</find>
+      <find>school.</find>
     </findStrings>
     <replaceStrings>
       <replace>NewGroupForm</replace>
@@ -169,12 +144,9 @@
         <option value="$PROJECT_DIR$/languageschool/school/templates/school/group_create.html" />
         <option value="$PROJECT_DIR$/languageschool/school/templates/school/group_form.html" />
         <option value="$PROJECT_DIR$/languageschool/school/templates/school/assignment_detail.html" />
-        <option value="$PROJECT_DIR$/languageschool/languageschool/urls.py" />
         <option value="$PROJECT_DIR$/languageschool/school/templates/registration/login.html" />
-        <option value="$PROJECT_DIR$/languageschool/school/templates/base.html" />
         <option value="$PROJECT_DIR$/languageschool/school/templates/admin/change_list.html" />
         <option value="$PROJECT_DIR$/languageschool/school/utils.py" />
-        <option value="$PROJECT_DIR$/languageschool/languageschool/settings.py" />
         <option value="$PROJECT_DIR$/languageschool/school/templates/school/classroom_list.html" />
         <option value="$PROJECT_DIR$/languageschool/school/templates/school/classroom_detail.html" />
         <option value="$PROJECT_DIR$/languageschool/school/migrations/0002_auto_20180801_1121.py" />
@@ -182,21 +154,25 @@
         <option value="$PROJECT_DIR$/languageschool/school/templates/school/assignment_form.html" />
         <option value="$PROJECT_DIR$/languageschool/school/templates/school/group_detail.html" />
         <option value="$PROJECT_DIR$/languageschool/school/templates/school/assignment_list.html" />
-        <option value="$PROJECT_DIR$/languageschool/school/urls.py" />
-        <option value="$PROJECT_DIR$/languageschool/school/forms.py" />
-        <option value="$PROJECT_DIR$/languageschool/school/admin.py" />
         <option value="$PROJECT_DIR$/languageschool/school/migrations/0004_auto_20180801_1930.py" />
         <option value="$PROJECT_DIR$/languageschool/school/migrations/0003_auto_20180801_1316.py" />
-        <option value="$PROJECT_DIR$/languageschool/school/models.py" />
         <option value="$PROJECT_DIR$/languageschool/school/views.py" />
+        <option value="$PROJECT_DIR$/languageschool/school/templates/base.html" />
+        <option value="$PROJECT_DIR$/languageschool/languageschool/urls.py" />
+        <option value="$PROJECT_DIR$/languageschool/school/urls.py" />
+        <option value="$PROJECT_DIR$/languageschool/languageschool/settings.py" />
+        <option value="$PROJECT_DIR$/languageschool/school/templates/registration/register.html" />
+        <option value="$PROJECT_DIR$/languageschool/school/forms.py" />
+        <option value="$PROJECT_DIR$/languageschool/school/admin.py" />
+        <option value="$PROJECT_DIR$/languageschool/school/models.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
-    <option name="y" value="-4" />
-    <option name="width" value="1855" />
-    <option name="height" value="1084" />
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="895" />
+    <option name="y" value="24" />
+    <option name="width" value="1025" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -222,13 +198,6 @@
               <item name="languageschool" type="462c0819:PsiDirectoryNode" />
               <item name="school" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="dj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dj" type="462c0819:PsiDirectoryNode" />
-              <item name="languageschool" type="462c0819:PsiDirectoryNode" />
-              <item name="school" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -243,6 +212,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/languageschool/school/templates/registration" />
       <recent name="$PROJECT_DIR$/languageschool/school/templates/school" />
       <recent name="$PROJECT_DIR$/languageschool/school/static" />
     </key>
@@ -305,18 +275,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="895" y="24" width="1025" height="1056" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.17358078" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.26047903" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Python Console" order="0" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.40271968" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.39870688" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32845187" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.3275862" />
       <window_info anchor="bottom" id="Run" order="6" weight="0.32972974" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
@@ -397,13 +367,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/languageschool/school/migrations/0005_auto_20180730_1901.py" />
     <entry file="file://$PROJECT_DIR$/languageschool/school/migrations/0006_auto_20180730_1903.py" />
-    <entry file="file://$PROJECT_DIR$/languageschool/school/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/languageschool/school/migrations/0005_auto_20180731_1027.py" />
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/MySQLdb/connections.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -431,13 +394,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/languageschool/school/templates/content.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="162" selection-start-line="9" selection-start-column="162" selection-end-line="9" selection-end-column="162" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/contrib/admin/templates/admin/change_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -446,24 +402,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/languageschool/school/templates/admin/change_list.html" />
-    <entry file="file://$PROJECT_DIR$/languageschool/school/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/languageschool/school/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/languageschool/languageschool/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
@@ -484,13 +426,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/languageschool/school/migrations/0003_auto_20180801_0912.py" />
     <entry file="file://$PROJECT_DIR$/languageschool/school/migrations/0002_schoollesson.py" />
-    <entry file="file://$PROJECT_DIR$/languageschool/languageschool/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1903">
-          <caret line="129" column="18" selection-start-line="129" selection-start-column="18" selection-end-line="129" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/languageschool/school/templates/school/classroom_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -513,27 +448,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/languageschool/school/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/languageschool/school/templates/school/assignment_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/languageschool/school/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -565,19 +483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/languageschool/school/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-            <marker date="1533150940731" expanded="true" signature="121:122" ph="..." />
-            <marker date="1533150940731" expanded="true" signature="164:421" ph="..." />
-            <marker date="1533150940731" expanded="true" signature="288:421" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/languageschool/school/migrations/0003_auto_20180801_1316.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -592,35 +497,117 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/languageschool/school/forms.py">
+    <entry file="file://$PROJECT_DIR$/languageschool/school/templates/content.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="59" column="55" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
+        <state relative-caret-position="135">
+          <caret line="9" column="162" selection-start-line="9" selection-start-column="162" selection-end-line="9" selection-end-column="162" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/languageschool/school/migrations/0005_auto_20180802_0817.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/languageschool/school/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="54" column="13" lean-forward="true" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/languageschool/school/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="852">
+          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/languageschool/school/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
-            <marker date="1533130364434" expanded="true" signature="1395:1396" ph="..." />
-            <marker date="1533130364434" expanded="true" signature="1439:1440" ph="..." />
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/languageschool/languageschool/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1766">
+          <caret line="132" column="26" selection-start-line="132" selection-start-column="26" selection-end-line="132" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/languageschool/languageschool/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/languageschool/school/templates/registration/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/languageschool/school/templates/registration/register_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/languageschool/school/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="61" lean-forward="true" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+            <marker date="1533210384849" expanded="true" signature="1714:1765" ph="..." />
+            <marker date="1533210384849" expanded="true" signature="1803:2307" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/languageschool/school/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-411">
-          <caret line="61" column="38" lean-forward="true" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="38" />
+        <state relative-caret-position="327">
+          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-            <marker date="1533208292906" expanded="true" signature="380:495" ph="..." />
+            <marker date="1533217495733" expanded="true" signature="323:431" ph="..." />
+            <marker date="1533217495733" expanded="true" signature="693:699" ph="..." />
+            <marker date="1533217495733" expanded="true" signature="1588:1739" ph="..." />
+            <marker date="1533217495733" expanded="true" signature="1853:1991" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/languageschool/school/views.py">
+    <entry file="file://$PROJECT_DIR$/languageschool/school/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
+        <state relative-caret-position="236">
+          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
           <folding>
-            <element signature="e#0#64#0" expanded="true" />
+            <element signature="e#0#24#0" expanded="true" />
+            <marker date="1533212884428" expanded="true" signature="961:1302" ph="..." />
+            <marker date="1533212884428" expanded="true" signature="961:1687" ph="..." />
+            <marker date="1533212884428" expanded="true" signature="2170:2171" ph="..." />
+            <marker date="1533212884428" expanded="true" signature="2214:2215" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/languageschool/school/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+            <marker date="1533216470857" expanded="true" signature="186:187" ph="..." />
+            <marker date="1533216470857" expanded="true" signature="229:486" ph="..." />
+            <marker date="1533216470857" expanded="true" signature="353:486" ph="..." />
           </folding>
         </state>
       </provider>

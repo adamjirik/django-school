@@ -28,6 +28,7 @@ class StudentRegisterForm(UserCreationForm):
 
     class Meta(UserCreationForm.Meta):
         model = User
+        fields = ('username', 'email', 'first_name', 'last_name')
 
     @transaction.atomic()
     def save(self):
@@ -41,6 +42,7 @@ class TeacherRegisterForm(UserCreationForm):
 
     class Meta(UserCreationForm.Meta):
         model = User
+        fields = ('username', 'email', 'first_name', 'last_name')
 
     @transaction.atomic()
     def save(self):

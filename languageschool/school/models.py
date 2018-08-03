@@ -48,8 +48,20 @@ class Group(models.Model):
     teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE)
     classroom = models.ForeignKey(Classroom, on_delete=models.CASCADE)
 
+    #TODO figure out how to limit students to seat number
+
+    # def check_available_seats(self):
+    #     available = True
+    #     if self.classroom.seats < self.students.count():
+    #         available = False
+    #     return available
+
     def get_absolute_url(self):
         return reverse('group-detail', kwargs={'pk': self.pk})
+
+    # def clean(self):
+    #     if self.classroom.seats < self.students.count():
+    #         raise ValidationError('There are no available seats left')
 
     def __str__(self):
         return "%s" % (self.group_name)
